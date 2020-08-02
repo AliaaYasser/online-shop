@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="~/Content/Furnish - Furniture and Decor Website Template_files/img/favicon.png" type="image/png">
+        <link rel="stylesheet" href="~/Content/Furnish - Furniture and Decor Website Template_files/bootstrap.min.css">
+        <link rel="stylesheet" href="~/Content/Furnish - Furniture and Decor Website Template_files/animate.css">
+        <link rel="stylesheet" href="~/Content/Furnish - Furniture and Decor Website Template_files/magnific-popup.css">
+        <link rel="stylesheet" href="~/Content/Furnish - Furniture and Decor Website Template_files/slick.css">
+        <link rel="stylesheet" href="~/Content/Furnish - Furniture and Decor Website Template_files/LineIcons.css">
+        <link rel="stylesheet" href="~/Content/Furnish - Furniture and Decor Website Template_files/default.css">
+        <link rel="stylesheet" href="~/Content/Furnish - Furniture and Decor Website Template_files/style.css">
+        <link rel="stylesheet" href="~/Content/Furnish - Furniture and Decor Website Template_files/responsive.css">
+        <link id="avast_os_ext_custom_font" href="chrome-extension://mbckjcfnjmoiinpgddefodcighgikkgn/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    </head>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/css/")
+
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+
+    <div class="preloader" style="display: none;">
+        <div class="spin">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+    </div>
+
+    <header class="header-area sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="https://preview.uideck.com/items/furnish-opl/index.html">
+                            <img src="~/Content/Furnish - Furniture and Decor Website Template_files/logo.png" alt="Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="bar-icon"></span>
+                            <span class="bar-icon"></span>
+                            <span class="bar-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul id="nav" class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    @Html.ActionLink("Commerce", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                                </li>
+                                <li class="nav-item">
+                                    @Html.ActionLink("  Home  ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                                </li>
+                                <li class="nav-item">
+                                    @Html.ActionLink("  About ", "About", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                                </li>
+                                <li class="nav-item">
+                                    @Html.ActionLink("  Contact  ", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                                </li>
+                                <li class="nav-item">
+                                    @if (Session["userRole"] == null && Session["userRole"] !="admin"&& Session["userRole"] !="user")
+                                    {
+                                        @Html.ActionLink("  login ", "login", "Userapps", new { area = "" }, new { @class = "navbar-brand" })
+                                        @Html.ActionLink(" sinup  ", "register", "Userapps", new { area = "" }, new { @class = "navbar-brand" })
+                                    }
+                                    else
+                                    {
+
+                                       
+                                        @Html.ActionLink(" products  ", "Index", "products", new { area = "" }, new { @class = "navbar-brand" })
+
+                                        @Html.ActionLink("  logout  ", "logout", "Userapps", new { area = "" }, new { @class = "navbar-brand" })
+                                    }
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="slider-area pt-100">
+        <div class="container-fluid position-relative">
+            <div class="slider-active slick-initialized slick-slider slick-dotted">
+                <div class="slick-list draggable">
+                    <div class="slick-track" style="opacity: 1; width: 3957px;">
+                        <div class="single-slider slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00" style="width: 1319px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;">
+                            <div class="slider-bg">
+                                <div class="row no-gutters align-items-center ">
+                                    <div class="col-lg-4 col-md-5">
+                                        <div class="slider-product-image d-none d-md-block">
+                                            <img src="~/Content/Furnish - Furniture and Decor Website Template_files/1.jpg" alt="Slider">
+                                            <div class="slider-discount-tag">
+                                                <p>-50% <br> OFF</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-7">
+                                        <div class="slider-product-content">
+                                            <h1 class="slider-title mb-10" data-animation="fadeInUp" data-delay="0.3s" style="animation-delay: 0.3s;"><span>Sofa</span> and <span>Armchairs</span></h1>
+                                            <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s" style="animation-delay: 0.9s;">One day however a small line of blind text by the name of Lorem Ipsum <br> decided to leave for the far World of Grammar.</p>
+              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="single-slider slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 1319px; position: relative; left: -1319px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;">
+                            <div class="slider-bg">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-lg-4 col-md-5">
+                                        <div class="slider-product-image d-none d-md-block">
+                                            <img src="~/Content/Furnish - Furniture and Decor Website Template_files/3.jpg" alt="Slider">
+                                            <div class="slider-discount-tag">
+                                                <p>-20% <br> OFF</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-7">
+                                        <div class="slider-product-content">
+                                            <h1 class="slider-title mb-10" data-animation="fadeInUp" data-delay="0.3s" style="animation-delay: 0.3s;"><span>Winter</span> Sale! is <span>Here</span></h1>
+                                            <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s" style="animation-delay: 0.9s;">One day however a small line of blind text by the name of Lorem Ipsum <br> decided to leave for the far World of Grammar.</p>
+                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="single-slider slick-slide slick-current slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide02" aria-describedby="slick-slide-control02" style="width: 1319px; position: relative; left: -2638px; top: 0px; z-index: 999; opacity: 1;">
+                            <div class="slider-bg">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-lg-4 col-md-5">
+                                        <div class="slider-product-image d-none d-md-block">
+                                            <img src="~/Content/Furnish - Furniture and Decor Website Template_files/2.jpg" alt="Slider">
+                                            <div class="slider-discount-tag">
+                                                <p>FREE<br> QUOTE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-7">
+                                        <div class="slider-product-content">
+                                            <h1 class="slider-title mb-10" data-animation="fadeInUp" data-delay="0.3s" style="animation-delay: 0.3s;"><span>Get</span> a Free <span>Quote</span></h1>
+                                            <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s" style="animation-delay: 0.9s;">One day however a small line of blind text by the name of Lorem Ipsum <br> decided to leave for the far World of Grammar.</p>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <ul class="slick-dots" style="display: block;" role="tablist"><li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3" tabindex="-1">1</button></li><li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 3" tabindex="-1">2</button></li><li role="presentation" class="slick-active"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 3" tabindex="0" aria-selected="true">3</button></li></ul>
+            </div>
+            <div class="slider-social">
+                <div class="row justify-content-end">
+                    <div class="col-lg-7 col-md-6">
+                        <ul class="social text-right">
+                            <li><a href="https://preview.uideck.com/items/furnish-opl/#"><i class="lni-facebook-filled"></i></a></li>
+                            <li><a href="https://preview.uideck.com/items/furnish-opl/#"><i class="lni-twitter-original"></i></a></li>
+                            <li><a href="https://preview.uideck.com/items/furnish-opl/#"><i class="lni-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @RenderBody()
+
+
+
+   
+    <section id="footer" class="footer-area">
+        <div class="container">
+            <div class="footer-widget pt-75 pb-120">
+                <div class="row">
+                    <div class="col-lg-3 col-md-5 col-sm-7">
+                        <div class="footer-logo mt-40">
+                            <a href="https://preview.uideck.com/items/furnish-opl/#">
+                                <img src="~/Content/Furnish - Furniture and Decor Website Template_files/logo.png" alt="Logo">
+                            </a>
+                            <p class="mt-10">Gravida nibh vel velit auctor aliquetn quibibendum auci elit cons equat ipsutis sem nibh id elit.</p>
+                            <ul class="footer-social mt-25">
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#"><i class="lni-facebook-filled"></i></a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#"><i class="lni-twitter-original"></i></a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#"><i class="lni-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-5">
+                        <div class="footer-link mt-50">
+                            <h5 class="f-title">Services</h5>
+                            <ul>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Architechture Design</a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Interior Design</a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Autocad Services</a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Lighting Design</a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Poster Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-5">
+                        <div class="footer-link mt-50">
+                            <h5 class="f-title">Help</h5>
+                            <ul>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Forum</a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Blog</a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Help Center</a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Contact Us</a></li>
+                                <li><a href="https://preview.uideck.com/items/furnish-opl/#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-7">
+                        <div class="footer-info mt-50">
+                            <h5 class="f-title">Contact Info</h5>
+                            <ul>
+                                <li>
+                                    <div class="single-footer-info mt-20">
+                                        <span>Phone :</span>
+                                        <div class="footer-info-content">
+                                            <p>+88123 4567 890</p>
+                                            <p>+88123 4567 890</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="single-footer-info mt-20">
+                                        <span>Email :</span>
+                                        <div class="footer-info-content">
+                                            <p>contact@yourmail.com</p>
+                                            <p>support@yourmail.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="single-footer-info mt-20">
+                                        <span>Address :</span>
+                                        <div class="footer-info-content">
+                                            <p>5078 Jensen Key, Port Kaya, WV 73505</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright pt-15 pb-15">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright text-center">
+                            <p>Crafted by <a href="https://uideck.com/" rel="nofollow">UIdeck</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://preview.uideck.com/items/furnish-opl/#" class="back-to-top" style="display: inline-block;"><i class="lni-chevron-up"></i></a>
+
+
+    <script src="~/Content/Furnish - Furniture and Decor Website Template_files/modernizr-3.6.0.min.js.download"></script>
+    <script src="~/Content/Furnish - Furniture and Decor Website Template_files/jquery-1.12.4.min.js.download"></script>
+    <script src="~/Content/Furnish - Furniture and Decor Website Template_files/bootstrap.min.js.download"></script>
+    <script src="~/Content/Furnish - Furniture and Decor Website Template_files/slick.min.js.download"></script>
+    <script src="~/Content/Furnish - Furniture and Decor Website Template_files/jquery.magnific-popup.min.js.download"></script>
+    <script src="~/Content/Furnish - Furniture and Decor Website Template_files/jquery.nav.js.download"></script>
+    <script src="~/Content/Furnish - Furniture and Decor Website Template_files/jquery.nice-number.min.js.download"></script>
+    <script src="~/Content/Furnish - Furniture and Decor Website Template_files/main.js.download"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

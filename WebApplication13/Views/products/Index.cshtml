@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication13.Models.product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<section id="discount-product" class="discount-product pt-100">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                @if (Session["userRole"] == "admin")
+                {
+                    <br />
+                    @Html.ActionLink("Create New", "Create",new { @class = "btn btn-default" })
+                    <hr />
+
+                    @Html.ActionLink("categories", "Index", "categories", new { @class = "main-btn" })
+                }
+                else
+                { }
+                @foreach (var item in Model)
+                {
+
+                    <div class="single-discount-product mt-30">
+
+                        <div class="product-image slick-initialized slick-slider">
+                            <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 555px; transform: translate3d(0px, 0px, 0px);"><img src="~/Content/Furnish - Furniture and Decor Website Template_files/product-1.jpg" alt="Product" class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 555px;"></div></div>
+                        </div>
+                        <disv class="product-content">
+                            <h4 class="content-title mb-15"> category : @Html.DisplayFor(modelItem => item.category.name) <br /></h4>
+
+                            <h1 class="content-title mb-15">   @Html.DisplayFor(modelItem => item.name) <br> For you</h1>
+
+                            <h1 class="content-title mb-15"> @Html.DisplayFor(modelItem => item.price) @ViewBag.role</h1>
+
+                            <h4 class="content-title mb-15">  @Html.DisplayFor(modelItem => item.Description)</h4>
+
+
+
+                        </disv>
+
+                        @if (Session["userRole"] == "admin")
+                        {
+                            <br />
+                            <br />
+                            @Html.ActionLink(" Edit  ", "Edit", new { id = item.id }, new { @class = "main-btn" })
+
+                            
+                            @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-default" })
+
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "main-btn" })
+
+                        }
+
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</section>
